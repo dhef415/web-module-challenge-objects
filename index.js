@@ -51,9 +51,13 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch",
-  function discount(string){
+  discount(string){
     if (string==="teacher"){
-      return price*.21;
+      return `${this.price}`-1/4;
+    }else if(string==="student"){
+      return `${this.price}`-1/10;
+    }else{
+      return `${this.price}`
     }
   }
 }
@@ -85,7 +89,7 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
+console.log(reviews.push("Daniel",5,"Everything was great."))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
